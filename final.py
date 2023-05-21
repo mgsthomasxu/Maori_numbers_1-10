@@ -27,7 +27,6 @@ print()
 having_fun = yes_no("Are you having fun?: ").lower()
 print(f"You entered '{having_fun}'")
 
-
 import random
 from collections import deque
 
@@ -45,15 +44,18 @@ numbers = {
     10: "tekau"
 }
 
+
 # Function to generate a random question
 def generate_question():
     num = random.randint(1, 10)
     maori_num = numbers[num]
     return num, maori_num
 
+
 # Function to check the user's answer
 def check_answer(user_answer, correct_answer):
     return user_answer.lower() == correct_answer
+
 
 # Main quiz function
 def quiz():
@@ -87,7 +89,8 @@ def quiz():
 
         print("--------------------")
 
-    print(f"Quiz complete! Your score: {score}/{num_questions}")
+    print(f"Quiz complete! Your score: {score} / {num_questions}")
+
 
 # Run the quiz
 quiz()
